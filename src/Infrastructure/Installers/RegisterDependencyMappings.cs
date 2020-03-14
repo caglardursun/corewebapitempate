@@ -1,11 +1,11 @@
-﻿using PenMail.Contracts;
-using PenMail.Services;
+﻿using API.Contracts;
+using API.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PenMail.Infrastructure.Handlers;
-using PenMail.Data.DataManager;
+using API.Infrastructure.Handlers;
+using API.Data.DataManager;
 
-namespace PenMail.Infrastructure.Installers
+namespace API.Infrastructure.Installers
 {
     internal class RegisterDependencyMappings : IServiceRegistration
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch.Operations;
 using Microsoft.OpenApi.Models;
-using PenMail.Contracts;
+using API.Contracts;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PenMail.Infrastructure.Filters
+namespace API.Infrastructure.Filters
 {
     public class FormFileOperationFilter : IOperationFilter
     {

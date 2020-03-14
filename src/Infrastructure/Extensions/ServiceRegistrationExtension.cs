@@ -1,10 +1,10 @@
-﻿using PenMail.Contracts;
+﻿using API.Contracts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
-namespace PenMail.Infrastructure.Extensions
+namespace API.Infrastructure.Extensions
 {
     public static class ServiceRegistrationExtension
     {

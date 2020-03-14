@@ -1,13 +1,13 @@
-﻿using PenMail.Contracts;
+﻿using API.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using FluentValidation;
 
-using PenMail.DTO.Request;
+using API.DTO.Request;
 
-namespace PenMail.Infrastructure.Installers
+namespace API.Infrastructure.Installers
 {
     internal class RegisterModelValidators: IServiceRegistration
     {

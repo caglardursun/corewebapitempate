@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace PenMail.Infrastructure.Extensions
+namespace API.Infrastructure.Extensions
 {
     public static class StringExtensions
     {

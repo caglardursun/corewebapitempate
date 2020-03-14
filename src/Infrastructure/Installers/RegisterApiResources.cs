@@ -1,8 +1,8 @@
-﻿using PenMail.Constants;
-using PenMail.Contracts;
-using PenMail.Infrastructure.Configs;
-using PenMail.Infrastructure.Handlers;
-using PenMail.Services;
+﻿using API.Constants;
+using API.Contracts;
+using API.Infrastructure.Configs;
+using API.Infrastructure.Handlers;
+using API.Services;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
@@ -16,7 +16,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace PenMail.Infrastructure.Installers
+namespace API.Infrastructure.Installers
 {
     internal class RegisterApiResources : IServiceRegistration
     {

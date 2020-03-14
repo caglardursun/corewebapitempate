@@ -1,11 +1,11 @@
-﻿using PenMail.Contracts;
-using PenMail.Infrastructure.HealthChecks;
+﻿using API.Contracts;
+using API.Infrastructure.HealthChecks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using System;
 
-namespace PenMail.Infrastructure.Installers
+namespace API.Infrastructure.Installers
 {
     internal class RegisterHealthChecks : IServiceRegistration
     {

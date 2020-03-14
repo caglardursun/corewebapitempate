@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PenMail.Infrastructure.Helpers
+namespace API.Infrastructure.Helpers
 {
     public static class PropertyValidation
     {

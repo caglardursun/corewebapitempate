@@ -6,12 +6,12 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PenMail.Infrastructure.Helpers
+namespace API.Infrastructure.Helpers
 {
     public static class StringCipher
     {
         //A guid might be helpfull
-        private const string EncryptionKey = "0a2e472b-d1680-643fd-4685-3b13f5acf222";
+        private const string EncryptionKey = "0a2e472b-d180-63fd-4685-3b13f5acf222";
         public static string ToEncrypted(this string clearText)
         {
             

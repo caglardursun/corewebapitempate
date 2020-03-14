@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PenMail.Infrastructure.Helpers
+namespace API.Infrastructure.Helpers
 {
     public static class FileHelper
     {

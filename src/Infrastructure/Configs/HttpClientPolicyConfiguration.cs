@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PenMail.Infrastructure.Configs
+namespace API.Infrastructure.Configs
 {
     public class HttpClientPolicyConfiguration
     {

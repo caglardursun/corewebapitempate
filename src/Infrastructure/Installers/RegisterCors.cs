@@ -1,8 +1,8 @@
-﻿using PenMail.Contracts;
+﻿using API.Contracts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace PenMail.Infrastructure.Installers
+namespace API.Infrastructure.Installers
 {
     internal class RegisterCors : IServiceRegistration
     {
@@ -22,16 +22,16 @@ namespace PenMail.Infrastructure.Installers
                 });
             });
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowLocal",
-                builder =>
-                {
-                    builder.WithOrigins("http://localhost:64808")
-                           .WithHeaders()
-                           .AllowAnyMethod();
-                });
-            });
+            // services.AddCors(options =>
+            // {
+            //     options.AddPolicy("AllowLocal",
+            //     builder =>
+            //     {
+            //         builder.WithOrigins("http://localhost:64808")
+            //                .WithHeaders()
+            //                .AllowAnyMethod();
+            //     });
+            // });
 
             services.AddMvc();
 

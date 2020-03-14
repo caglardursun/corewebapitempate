@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace PenMail.Infrastructure.Filters
+namespace API.Infrastructure.Filters
 {
     public class SwaggerAuthorizeCheckOperationFilter : IOperationFilter
     {

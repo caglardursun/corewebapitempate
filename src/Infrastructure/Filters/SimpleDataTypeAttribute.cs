@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PenMail.Infrastructure.Filters
+namespace API.Infrastructure.Filters
 {
     /// <summary>
     /// Use int entities like ...    

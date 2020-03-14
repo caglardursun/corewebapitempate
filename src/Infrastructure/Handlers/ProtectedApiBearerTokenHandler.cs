@@ -1,11 +1,11 @@
-﻿using PenMail.Contracts;
+﻿using API.Contracts;
 using IdentityModel.Client;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace PenMail.Infrastructure.Handlers
+namespace API.Infrastructure.Handlers
 {
     public class ProtectedApiBearerTokenHandler : DelegatingHandler
     {
