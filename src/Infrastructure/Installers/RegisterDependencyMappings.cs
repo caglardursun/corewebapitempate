@@ -12,10 +12,10 @@ namespace API.Infrastructure.Installers
         public void RegisterAppServices(IServiceCollection services, IConfiguration config)
         {
             //register handler
-            services.AddTransient<IFileWriterHandler, FileWriterHandler>();
+            
 
             //Register Interface Mappings 4 Repositories Dep. Injection                                 
-            //services.AddTransient<IPersonManager, PersonManager>();
+            //services.AddTransient<IGeneralUserManager, GeneralUserManager>();
                         
 
             //ApiAuthenticationService registered ...

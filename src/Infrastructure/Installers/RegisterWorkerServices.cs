@@ -1,8 +1,8 @@
-﻿using PenMail.Contracts;
+﻿using API.Contracts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace PenMail.Infrastructure.Installers
+namespace API.Infrastructure.Installers
 {
     internal class RegisterWorkerServices : IServiceRegistration
     {

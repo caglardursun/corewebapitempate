@@ -15,8 +15,8 @@ namespace API.Infrastructure.Installers
         {
             //Register DTO Validators
             
-            //services.AddTransient<IValidator<CreatePersonRequest>, CreatePersonRequestValidator>();
-            //services.AddTransient<IValidator<UpdatePersonRequest>, UpdatePersonRequestValidator>();
+            //services.AddTransient<IValidator<CreateGeneralUserRequest>, CreateGeneralUserRequestValidator>();
+            //services.AddTransient<IValidator<UpdateGeneralUserRequest>, UpdateGeneralUserRequestValidator>();
 
            
 

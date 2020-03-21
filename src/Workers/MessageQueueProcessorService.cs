@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PenMail.Workers
+namespace API.Workers
 {
     public class MessageQueueProcessorService: BackgroundService
     {
