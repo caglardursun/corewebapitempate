@@ -14,11 +14,8 @@ namespace API.Infrastructure.Installers
         public void RegisterAppServices(IServiceCollection services, IConfiguration configuration)
         {
             //Register DTO Validators
-            
-            //services.AddTransient<IValidator<CreateGeneralUserRequest>, CreateGeneralUserRequestValidator>();
-            //services.AddTransient<IValidator<UpdateGeneralUserRequest>, UpdateGeneralUserRequestValidator>();
 
-           
+            services.AddTransient<IValidator<ApiUserRequest>, ApiUserRequestValidator>();
 
 
 
