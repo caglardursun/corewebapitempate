@@ -73,7 +73,6 @@
     <Folder Include="Logs\" />
     <Folder Include="sql\" />
     <Folder Include="src\Infrastructure\HealthChecks\Db\" />
-    <Folder Include="src\API\" />
     <Folder Include="Uploads\" />    
   </ItemGroup>
 
