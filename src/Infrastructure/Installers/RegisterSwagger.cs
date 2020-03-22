@@ -76,8 +76,6 @@ namespace API.Infrastructure.Installers
                 //options.OperationFilter<SwaggerAuthorizeCheckOperationFilter>();
                 //options.OperationFilter<FormFileOperationFilter>();
                 
-
-
             });
 
         

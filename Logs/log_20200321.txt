@@ -1,0 +1,66 @@
+2020-03-21T23:05:46.0551563+03:00 [INF] () Starting web host
+2020-03-21T23:05:50.8139360+03:00 [FTL] () Host terminated unexpectedly
+System.AggregateException: One or more errors occurred. (SQLite Error 14: 'unable to open database file'.)
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 14: 'unable to open database file'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Create()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.CreateAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.CreateDatabase(IServiceProvider serviceProvider)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddHealthChecksUI(IServiceCollection services, String databaseName, Action`1 setupSettings)
+   at API.Infrastructure.Installers.RegisterHealthChecks.RegisterAppServices(IServiceCollection services, IConfiguration config) in D:\CoreAPI\src\Infrastructure\Installers\RegisterHealthChecks.cs:line 26
+   at API.Infrastructure.Extensions.ServiceRegistrationExtension.<>c__DisplayClass0_0.<AddServicesInAssembly>b__1(IServiceRegistration svc) in D:\CoreAPI\src\Infrastructure\Extensions\ServiceRegistrationExtension.cs:line 19
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at API.Infrastructure.Extensions.ServiceRegistrationExtension.AddServicesInAssembly(IServiceCollection services, IConfiguration configuration) in D:\CoreAPI\src\Infrastructure\Extensions\ServiceRegistrationExtension.cs:line 19
+   at API.Startup.ConfigureServices(IServiceCollection services) in D:\CoreAPI\src\Startup.cs:line 35
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.InvokeCore(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass9_0.<Invoke>g__Startup|0(IServiceCollection serviceCollection)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.Invoke(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass8_0.<Build>b__0(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.UseStartup(Type startupType, HostBuilderContext context, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass12_0.<UseStartup>b__0(HostBuilderContext context, IServiceCollection services)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at API.Program.Main(String[] args) in D:\CoreAPI\src\Program.cs:line 24
+2020-03-21T23:08:19.1086808+03:00 [INF] () Starting web host
+2020-03-21T23:08:21.1252530+03:00 [FTL] () Host terminated unexpectedly
+System.AggregateException: One or more errors occurred. (SQLite Error 14: 'unable to open database file'.)
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 14: 'unable to open database file'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Create()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.CreateAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.CreateDatabase(IServiceProvider serviceProvider)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddHealthChecksUI(IServiceCollection services, String databaseName, Action`1 setupSettings)
+   at API.Infrastructure.Installers.RegisterHealthChecks.RegisterAppServices(IServiceCollection services, IConfiguration config) in D:\CoreAPI\src\Infrastructure\Installers\RegisterHealthChecks.cs:line 26
+   at API.Infrastructure.Extensions.ServiceRegistrationExtension.<>c__DisplayClass0_0.<AddServicesInAssembly>b__1(IServiceRegistration svc) in D:\CoreAPI\src\Infrastructure\Extensions\ServiceRegistrationExtension.cs:line 19
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at API.Infrastructure.Extensions.ServiceRegistrationExtension.AddServicesInAssembly(IServiceCollection services, IConfiguration configuration) in D:\CoreAPI\src\Infrastructure\Extensions\ServiceRegistrationExtension.cs:line 19
+   at API.Startup.ConfigureServices(IServiceCollection services) in D:\CoreAPI\src\Startup.cs:line 35
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.InvokeCore(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass9_0.<Invoke>g__Startup|0(IServiceCollection serviceCollection)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.Invoke(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass8_0.<Build>b__0(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.UseStartup(Type startupType, HostBuilderContext context, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass12_0.<UseStartup>b__0(HostBuilderContext context, IServiceCollection services)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at API.Program.Main(String[] args) in D:\CoreAPI\src\Program.cs:line 24

@@ -10,9 +10,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Infrastructure.Helpers;
 
 namespace API.API.V1
 {
+    [Route("api/v1/[controller]")]
+    [ApiController]
+    [Authorize]
     public class AuthenticationController
     {
         private ILogger<AuthenticationController> _logger;
@@ -28,6 +32,9 @@ namespace API.API.V1
             _logger = logger;
             _mapper = mapper;
             _authenticationService = authenticationService;
+
+            
+            
         }
 
 
@@ -45,6 +52,8 @@ namespace API.API.V1
         public async Task<ApiResponse> Post([FromBody] ApiUserRequest user)
         {
             var mapped = _mapper.Map<ApiUser>(user);
+
+            
 
             var data = await _authenticationService.Authenticate(mapped);
             if (data == null)

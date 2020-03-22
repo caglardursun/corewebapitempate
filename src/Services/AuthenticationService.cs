@@ -112,9 +112,7 @@ namespace API.Services
                     new Claim(ClaimTypes.Name, user.UserName),
                     new Claim(ClaimTypes.Email, (user.EMail == null) ? "": user.EMail),                    
                     new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()),
-                    new Claim("Id", user.ID.ToString()),
-                    //new Claim("email", (user.email == null) ? "": user.email),
-                    //new Claim("gsm", (user.gsm == null)? "": user.gsm),
+                    new Claim("Id", user.ID.ToString()),                   
                     new Claim("IsAdmin", user.IsAdmin.ToString()),                    
                     new Claim("IsManager", user.IsManager.ToString())                    
                     };
