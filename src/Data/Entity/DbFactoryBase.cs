@@ -1,14 +1,12 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 using System.Threading.Tasks;
 using static Dapper.SqlMapper;
-using System.Linq;
-using System.Text;
-using System.Reflection;
-using System;
 
 namespace API.Data
 {
@@ -30,7 +28,9 @@ namespace API.Data
             using (IDbConnection dbCon = DbConnection)
             {
                 if (parameters == null)
+                {
                     return await dbCon.QueryAsync<T>(sql);
+                }
 
                 return await dbCon.QueryAsync<T>(sql, parameters);
             }
@@ -64,7 +64,9 @@ namespace API.Data
             using (IDbConnection dbCon = DbConnection)
             {
                 if (parameters == null)
+                {
                     return await dbCon.ExecuteScalarAsync<T>(sql);
+                }
 
                 return await dbCon.ExecuteScalarAsync<T>(sql, parameters);
             }
@@ -88,7 +90,7 @@ namespace API.Data
         }
 
 
-        public virtual async Task<(IEnumerable<TParent> Data, int RecordCount)> DbQueryMultipleAsync<TParent,TChild>(string sql, object parameters = null)
+        public virtual async Task<(IEnumerable<TParent> Data, int RecordCount)> DbQueryMultipleAsync<TParent, TChild>(string sql, object parameters = null)
         {
             IEnumerable<TParent> data = null;
             int totalRecords = 0;
@@ -120,28 +122,30 @@ namespace API.Data
         {
             IEnumerable<TParent> data = null;
             int recordCount = 0;
-            
+
             var param = new DynamicParameters();
             param.Add("Limit", urlSearchParams.PageSize);
             param.Add("Offset", urlSearchParams.PageNumber);
             string tableName = typeof(TParent).Name;
-            if (builder == null)            
-                builder = new SqlBuilder(); 
-            
+            if (builder == null)
+            {
+                builder = new SqlBuilder();
+            }
+
             //orderCriteria = $"[{tableName}].[" + orderCriteria+"]";
 
             //orderCriteria += $"[{tableName}]" + $".[{orderCriteria}]";
             //For the left join queries we should define TableName.ColumnName so ...
-            StringBuilder sb = new StringBuilder();            
+            StringBuilder sb = new StringBuilder();
             foreach (var property in typeof(TParent).GetProperties())
             {
-                builder.Select($"[{tableName}].[{property.Name}]");               
+                builder.Select($"[{tableName}].[{property.Name}]");
             }
 
             string sql = $@"SELECT /**select**/ FROM {tableName} /**where**/
                                   ORDER BY {orderCriteria} DESC 
                                   OFFSET @Limit * (@Offset -1) ROWS FETCH NEXT @Limit ROWS ONLY";
-            
+
 
             if (urlSearchParams.SearchFields.Count > 0)
             {
@@ -152,14 +156,18 @@ namespace API.Data
                     {
 
                         string[] dates = listItem.SearchValue.Split("-");
-                        if (dates.Length == 3)                        
+                        if (dates.Length == 3)
+                        {
                             builder.Where($"DATEPART(yy, {listItem.Column}) =  {dates[0]} AND DATEPART(mm, {listItem.Column}) = {dates[1]} AND DATEPART(dd, {listItem.Column}) = {dates[2]}");
-                    }                        
+                        }
+                    }
                     else
+                    {
                         builder.Where($"{listItem.Column} LIKE '{listItem.SearchValue}%'");
-                } 
+                    }
+                }
             }
-           
+
 
             using (IDbConnection dbCon = DbConnection)
             {

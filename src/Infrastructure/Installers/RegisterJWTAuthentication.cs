@@ -62,7 +62,7 @@ namespace API.Infrastructure.Installers
             #endregion
             
             
-            services.AddScoped<IApiAuthenticationService, ApiAuthenticationService>();
+            
         }
     }
 }

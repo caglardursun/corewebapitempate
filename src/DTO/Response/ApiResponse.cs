@@ -10,5 +10,6 @@ namespace API.DTO.Response
         public string Token { get; set; }
 
         public DateTime ExpiredDate { get; set; }
+        public string Claims { get; set; }
     }
 }

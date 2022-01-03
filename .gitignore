@@ -5,3 +5,4 @@
 /.vs/CoreAPI
 /obj
 /bin/Debug/netcoreapp3.1
+/bin/Debug/net5.0
